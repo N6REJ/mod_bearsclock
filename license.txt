@@ -1,0 +1,15 @@
+Copyright 2013 Troy T. Hall
+http://jowwow.me
+
+JowClock is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License v3 as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+JowClock is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+The full terms and conditions of the GNU General Public license v3 can be
+found at the following address: https://www.gnu.org/licenses/gpl-3.0.html
