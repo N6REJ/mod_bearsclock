@@ -16,7 +16,7 @@ $moduleSuffix = $params->get('moduleclass_sfx');
 <!-- BEGIN LAYOUT -->
 <!-- Vertical layout -->
 <?php if ($params->get('layout') == "vert") { ?>
-    <div id = "JowClock-vert_<?php echo $moduleTitle; ?>" class="<?php echo $moduleSuffix; ?>">
+    <div id = "JowClock-vert_<?php echo $moduleTitle; ?>">
         <!-- Timezone Before -->
         <?php if ($params->get('show-timezone') == "yes" && $params->get('timezone-position') == "before") { ?>
 
@@ -51,7 +51,7 @@ $moduleSuffix = $params->get('moduleclass_sfx');
 <?php } else { ?>
 
     <!-- Horizontal layout -->
-    <div id = "JowClock-horz_<?php echo $moduleTitle; ?>" class="<?php echo $moduleSuffix; ?>">		
+    <div id = "JowClock-horz_<?php echo $moduleTitle; ?>">		
         <!-- Timezone Before -->
         <?php if ($params->get('show-timezone') == "yes" && $params->get('timezone-position') == "before") { ?>
             <span id = "JowClockTimezone_<?php echo $moduleTitle; ?>" class="JowClockTimezone" >

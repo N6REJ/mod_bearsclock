@@ -7,19 +7,20 @@
 **/
 /* Clock */
 #JowClock-vert{
-	font-size: 1em;
-	}
+    font-size: 1em;
+}
 #JowClock-horz{
-	font-size: 1em;
+    font-size: 1em;
 }
 /* Time */
 .JowClockTime {
-	text-align: left;
- }
+    text-align: left;
+}
 /* Date */
 .JowClockDate {
-	text-align: center;
- }
+    text-align: center;
+}
 /* Timezone */
-.JowClockTimezone {	text-align: center;
- }
+.JowClockTimezone {
+    text-align: center;
+}
