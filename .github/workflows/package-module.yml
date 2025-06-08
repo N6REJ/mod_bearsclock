@@ -1,4 +1,4 @@
-name: Package and Release Bears Pricing Tables Module
+name: Package and Release Bears Clock Module
 
 on:
   pull_request:
@@ -107,7 +107,7 @@ jobs:
       - name: Update XML file in repository
         run: |
           # Find the XML file
-          XML_FILE="mod_bears_pricing_tables.xml"
+          XML_FILE="mod_bearsclock.xml"
           
           if [ -f "$XML_FILE" ]; then
             echo "Found XML file at: $XML_FILE"
@@ -410,62 +410,58 @@ jobs:
       # For PR merges or manual runs: Create release
       - name: Create package directory
         if: steps.context.outputs.is_pr_merge == 'true' || steps.context.outputs.is_manual == 'true'
-        run: mkdir -p package/mod_bears_pricing_tables
+        run: mkdir -p package/mod_bearsclock
       
       - name: Copy module files
         if: steps.context.outputs.is_pr_merge == 'true' || steps.context.outputs.is_manual == 'true'
         run: |
           # Copy required files
-          cp mod_bears_pricing_tables.php package/mod_bears_pricing_tables/
-          cp mod_bears_pricing_tables.xml package/mod_bears_pricing_tables/
-          cp helper.php package/mod_bears_pricing_tables/
+          cp mod_bearsclock.php package/mod_bearsclock/
+          cp mod_bearsclock.xml package/mod_bearsclock/
+          cp helper.php package/mod_bearsclock/
           
           # Copy optional files if they exist
           if [ -f "License.txt" ]; then
-            cp License.txt package/mod_bears_pricing_tables/
+            cp License.txt package/mod_bearsclock/
           fi
           
           if [ -f "index.html" ]; then
-            cp index.html package/mod_bears_pricing_tables/
+            cp index.html package/mod_bearsclock/
           fi
           
           if [ -f "CHANGELOG.md" ]; then
-            cp CHANGELOG.md package/mod_bears_pricing_tables/
+            cp CHANGELOG.md package/mod_bearsclock/
           fi
           
           # Copy directories
           if [ -d "css" ]; then
-            cp -r css package/mod_bears_pricing_tables/
-          fi
-          
-          if [ -d "elements" ]; then
-            cp -r elements package/mod_bears_pricing_tables/
+            cp -r css package/mod_bearsclock/
           fi
           
           if [ -d "tmpl" ]; then
-            cp -r tmpl package/mod_bears_pricing_tables/
+            cp -r tmpl package/mod_bearsclock/
           fi
           
           if [ -d "language" ]; then
-            cp -r language package/mod_bears_pricing_tables/
+            cp -r language package/mod_bearsclock/
           fi
           
           # List the contents of the package directory
           echo "Package contents:"
-          ls -la package/mod_bears_pricing_tables/
+          ls -la package/mod_bearsclock/
       
       - name: Generate directory tree
         if: steps.context.outputs.is_pr_merge == 'true' || steps.context.outputs.is_manual == 'true'
         run: |
           apt-get update && apt-get install -y tree
-          tree package/mod_bears_pricing_tables > package/directory-structure.txt
+          tree package/mod_bearsclock > package/directory-structure.txt
       
       - name: Create ZIP archive
         if: steps.context.outputs.is_pr_merge == 'true' || steps.context.outputs.is_manual == 'true'
         run: |
           cd package
-          zip -r mod_bears_pricing_tables_${{ steps.set_version.outputs.version }}.zip mod_bears_pricing_tables
-          echo "Created ZIP archive: mod_bears_pricing_tables_${{ steps.set_version.outputs.version }}.zip"
+          zip -r mod_bearsclock_${{ steps.set_version.outputs.version }}.zip mod_bearsclock
+          echo "Created ZIP archive: mod_bearsclock_${{ steps.set_version.outputs.version }}.zip"
       
       
       - name: Create GitHub Release
@@ -474,14 +470,14 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.set_version.outputs.version }}
-          name: Bears Pricing Tables ${{ steps.set_version.outputs.version }}
+          name: Bears Clock ${{ steps.set_version.outputs.version }}
           files: |
-            package/mod_bears_pricing_tables_${{ steps.set_version.outputs.version }}.zip
+            package/mod_bearsclock_${{ steps.set_version.outputs.version }}.zip
             package/directory-structure.txt
           draft: false
           prerelease: false
           body: |
-            Bears Pricing Tables Module ${{ steps.set_version.outputs.version }}
+            Bears Clock Module ${{ steps.set_version.outputs.version }}
             
             ### Download Options:
             - Download directly from this release page
@@ -508,7 +504,7 @@ jobs:
             cp "$UPDATES_XML" "${UPDATES_XML}.bak"
             
             # Create the download URL for the new release
-            DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/${{ steps.set_version.outputs.version }}/mod_bears_pricing_tables_${{ steps.set_version.outputs.version }}.zip"
+            DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/${{ steps.set_version.outputs.version }}/mod_bearsclock_${{ steps.set_version.outputs.version }}.zip"
             
             # Update the version and download URL in the updates.xml file
             sed -i "s|<version>.*</version>|<version>${{ steps.set_version.outputs.version }}</version>|g" "$UPDATES_XML"
@@ -541,8 +537,8 @@ jobs:
         id: upload_artifact
         uses: actions/upload-artifact@v4.6.2
         with:
-          name: mod_bears_pricing_tables_${{ steps.set_version.outputs.version }}
-          path: package/mod_bears_pricing_tables_${{ steps.set_version.outputs.version }}.zip
+          name: mod_bearsclock_${{ steps.set_version.outputs.version }}
+          path: package/mod_bearsclock_${{ steps.set_version.outputs.version }}.zip
           retention-days: 90
           if-no-files-found: warn
       
@@ -552,4 +548,4 @@ jobs:
         run: |
           echo "::notice::The module package has been uploaded as an artifact."
           echo "::notice::You can download it from the Actions tab of this workflow run."
-          echo "::notice::Go to Actions → This workflow → This run → Artifacts section → Download 'mod_bears_pricing_tables_${{ steps.set_version.outputs.version }}'"
+          echo "::notice::Go to Actions → This workflow → This run → Artifacts section → Download 'mod_bearsclock_${{ steps.set_version.outputs.version }}'"
