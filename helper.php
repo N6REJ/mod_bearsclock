@@ -1,55 +1,46 @@
 <?php
 /**
- * @package JowClock for Joomla 3.0
- * @version 1.0
- * @author Troy T. Hall (http://jowwow.me)
- * @copyright (C) 2013 JowWow
- * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
-**/
+ * @package     Bears Clock
+ * @author      N6REJ
+ * @email       troy@hallhome.us
+ * @website     https://www.hallhome.us
+ * @copyright   Copyright (c) 2025 N6REJ
+ * @license     GNU General Public License version 3 or later; see LICENSE
+ * @since       2025.6.8
+ */
 
-defined( '_JEXEC' ) or die( 'Restricted access' );
+declare(strict_types=1);
 
-class modJowClockHelper
-{   
-    public static function getTime( $params )
+namespace BearsClock\Module\BearsClock\Site\Helper;
+
+use Joomla\Registry\Registry;
+
+final class BearsClockHelper
+{
+    public static function getTime(Registry $params): string
     {
-		$timezone=$params->get('timezone');
-		date_default_timezone_set($timezone); 
-		//$time=date("y,m,d,H,i,s");
-		$time=date("F d, Y H:i:s");
-        return $time;
+        $timezone = $params->get('timezone');
+        date_default_timezone_set($timezone);
+        return date('F d, Y H:i:s');
     }
-	
-	public static function getOutputTimezone( $params )
+
+    public static function getOutputTimezone(Registry $params): string
     {
-		$timezoneOut=$params->get('timezone');
-		$timezoneFormat=$params->get('timezone-format');
-		if($timezoneFormat=="full"){
-			$timezoneOut = str_replace("Indian/","Indian Ocean, ",$timezoneOut);
-			$timezoneOut = str_replace("Pacific/","Pacific Ocean, ",$timezoneOut);
-			$timezoneOut = str_replace("Atlantic/","Atlantic Ocean, ",$timezoneOut);
-			$timezoneOut = str_replace("/",", ",$timezoneOut);
-		}
-		elseif($timezoneFormat=="city"){
-			$timezoneOut = str_replace("Africa/","",$timezoneOut);
-			$timezoneOut = str_replace("America/","",$timezoneOut);
-				$timezoneOut = str_replace("Argentina/","",$timezoneOut);
-				$timezoneOut = str_replace("Indiana/","",$timezoneOut);
-				$timezoneOut = str_replace("Kentucky/","",$timezoneOut);
-				$timezoneOut = str_replace("North_Dakota/","",$timezoneOut);
-			$timezoneOut = str_replace("Antarctica/","",$timezoneOut);
-			$timezoneOut = str_replace("Arctic/","",$timezoneOut);
-			$timezoneOut = str_replace("Asia/","",$timezoneOut);
-			$timezoneOut = str_replace("Atlantic/","",$timezoneOut);
-			$timezoneOut = str_replace("Australia/","",$timezoneOut);
-			$timezoneOut = str_replace("Europe/","",$timezoneOut);
-			$timezoneOut = str_replace("Indian/","",$timezoneOut);
-			$timezoneOut = str_replace("Pacific/","",$timezoneOut);
-		}
-		elseif($timezoneFormat=="custom"){
-			$timezoneOut=$params->get('customTimezone');
-		}
-		$timezoneOut = str_replace("_"," ",$timezoneOut);
+        $timezoneOut = $params->get('timezone', 'UTC');
+        $timezoneFormat = $params->get('timezone-format', 'full');
+
+        if ($timezoneFormat === 'full') {
+            $timezoneOut = str_replace('Indian/', 'Indian Ocean, ', $timezoneOut);
+            $timezoneOut = str_replace('Pacific/', 'Pacific Ocean, ', $timezoneOut);
+            $timezoneOut = str_replace('Atlantic/', 'Atlantic Ocean, ', $timezoneOut);
+            $timezoneOut = str_replace('/', ', ', $timezoneOut);
+        } elseif ($timezoneFormat === 'city') {
+            // Strip everything before and including the last '/'
+            if (strpos($timezoneOut, '/') !== false) {
+                $timezoneOut = substr($timezoneOut, strrpos($timezoneOut, '/') + 1);
+            }
+        }
+        $timezoneOut = str_replace('_', ' ', $timezoneOut);
         return $timezoneOut;
     }
 }
