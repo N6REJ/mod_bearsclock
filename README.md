@@ -1,3 +1,5 @@
 BearsClock
 ========
 A live-clock based on Javascript and PHP. By using PHP together with Javascript this clock can get the time for a specified timezone trough PHPs much more advanced date() function and then keep the clock going with javascript. Supported timezones can be found at www.php.net/manual/en/timezones.php.
+
+![image](https://github.com/user-attachments/assets/949aa200-a48c-4ff0-8ecb-a04188f31b6c)
