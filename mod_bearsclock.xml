@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type = "module" version = "5" client = "site" method = "upgrade">
+    <name>Bears Clock</name>
+    <author>N6REJ</author>
+    <creationDate>2025 June 08</creationDate>
+    <copyright>Copyright (C)2025 N6REJ</copyright>
+    <license>GNU General Public License version 3 or later; see License.txt</license>
+    <authorEmail>troy@hallhome.us</authorEmail>
+    <authorUrl>https://hallhome.us</authorUrl>
+    <version>2025.06.08</version>
+    <description>MOD_BEARS_CLOCK_DESC</description>
+    <files>
+        <filename module = "mod_bearsclock">mod_bearsclock.php</filename>
+        <filename>mod_bearsclock.xml</filename>
+        <filename>helper.php</filename>
+        <filename>License.txt</filename>
+        <filename>index.html</filename>
+        <folder>css</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <languages>
+        <language tag = "en-GB">language/en-GB/mod_bearsclock.ini</language>
+        <language tag = "en-GB">language/en-GB/mod_bearsclock.sys.ini</language>
+    </languages>
+    <config>
+        <fields name = "params">
+            <fieldset name = "basic">
+                <field name = "timezone" type = "timezone" default = "America/Chicago" label = "MOD_BEARS_CLOCK_TIMEZONE_LABEL" description = "MOD_BEARS_CLOCK_TIMEZONE_DESC" />
+                <field name = "show-timezone" type = "radio" default = "1" label = "MOD_BEARS_CLOCK_SHOW_TIMEZONE_LABEL" description = "MOD_BEARS_CLOCK_SHOW_TIMEZONE_DESC">
+                    <option value = "1">JYES</option>
+                    <option value = "0">JNO</option>
+                </field>
+                <field name = "timezone-format" type = "list" default = "full" label = "MOD_BEARS_CLOCK_TIMEZONE_FORMAT_LABEL" description = "MOD_BEARS_CLOCK_TIMEZONE_FORMAT_DESC">
+                    <option value = "full">Full with continent.</option>
+                    <option value = "city">Just the city.</option>
+                </field>
+                <field name = "timezone-position" type = "radio" default = "after" label = "MOD_BEARS_CLOCK_TIMEZONE_POSITION_LABEL"
+                       description = "MOD_BEARS_CLOCK_TIMEZONE_POSITION_DESC">
+                    <option value = "after">After</option>
+                    <option value = "before">Before</option>
+                </field>
+                <field name = "format" type = "list" default = "24h" label = "MOD_BEARS_CLOCK_FORMAT_LABEL" description = "MOD_BEARS_CLOCK_FORMAT_DESC">
+                    <option value = "24h">24h</option>
+                    <option value = "12h">12h</option>
+                </field>
+                <field name = "seconds" type = "radio" default = "0" label = "MOD_BEARS_CLOCK_SECONDS_LABEL" description = "MOD_BEARS_CLOCK_SECONDS_DESC" layout="joomla.form.field.radio.switcher">
+                    <option value = "1">JYES</option>
+                    <option value = "0">JNO</option>
+                </field>
+                <field name = "leadingZeros" type = "radio" default = "both" label = "MOD_BEARS_CLOCK_LEADINGZEROS_LABEL" description = "MOD_BEARS_CLOCK_LEADINGZEROS_DESC" class="btn-group">
+                    <option value = "date">Date Only</option>
+                    <option value = "time">Time Only</option>
+                    <option value = "both">Both</option>
+                    <option value = "none">None</option>
+                </field>
+                <field name = "date" type = "list" default = "format1" label = "MOD_BEARS_CLOCK_DATE_LABEL" description = "MOD_BEARS_CLOCK_DATE_DESC">
+                    <option value = "no">No, don't display the date.</option>
+                    <option value = "format1">Yes. (YYYY-MM-DD)</option>
+                    <option value = "format2">Yes. (YYYY/MM/DD)</option>
+                    <option value = "format3">Yes. (DD/MM/YYYY)</option>
+                    <option value = "format4">Yes. (MM/DD/YYYY)</option>
+                    <option value = "format5">Yes. (16 Jan)</option>
+                    <option value = "format6">Yes. (Wed 16 Jan)</option>
+                    <option value = "format7">Yes. (Jan 16)</option>
+                    <option value = "format8">Yes. (Jan 16, 2013)</option>
+                    <option value = "format9">Yes. (Wed Jan 16)</option>
+                </field>
+                <field name = "layout" type = "radio" default = "1" label = "MOD_BEARS_CLOCK_LAYOUT_LABEL" description = "MOD_BEARS_CLOCK_LAYOUT_DESC">
+                    <option value = "0">JYES</option>
+                    <option value = "1">JNO</option>
+                </field>
+                <field name = "daytype" type = "radio" default = "1" label = "MOD_BEARS_CLOCK_DAYTYPE_LABEL" description = "MOD_BEARS_CLOCK_DAYTYPE_DESC">
+                    <option value = "1">JYES</option>
+                    <option value = "0">JNO</option>
+                </field>
+                <field name = "monthtype" type = "radio" default = "1" label = "MOD_BEARS_CLOCK_MONTHTYPE_LABEL" description = "MOD_BEARS_CLOCK_MONTHTYPE_DESC">
+                    <option value = "1">JYES</option>
+                    <option value = "0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name = "advanced">
+                <field
+                        name = "moduleclass_sfx"
+                        type = "text"
+                        label = "COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description = "COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name = "cache"
+                        type = "list"
+                        default = "1"
+                        label = "COM_MODULES_FIELD_CACHING_LABEL"
+                        description = "COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                            value = "1">JGLOBAL_USE_GLOBAL
+                    </option>
+                    <option
+                            value = "0">COM_MODULES_FIELD_VALUE_NOCACHING
+                    </option>
+                </field>
+
+                <field
+                        name = "cache_time"
+                        type = "text"
+                        default = "900"
+                        label = "COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        description = "COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field
+                        name = "cachemode"
+                        type = "hidden"
+                        default = "static">
+                    <option
+                            value = "static">
+                    </option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
