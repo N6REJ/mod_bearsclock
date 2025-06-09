@@ -138,7 +138,12 @@ jobs:
             echo "::error::XML file not found in repository"
             exit 1
           fi
-      
+
+      # Cleanup .bak files after XML and changelog updates
+      - name: Cleanup backup files
+        run: |
+          rm -f mod_bearsclock.xml.bak updates.xml.bak CHANGELOG.md.bak || true
+
       - name: Update PHP file version
         run: |
           # Find PHP files and update version if they exist
