@@ -34,7 +34,7 @@ $monthtype        = $params->get('monthtype', '1');
 ?>
 <!-- BEGIN LAYOUT -->
 <?php
-if ($layout === "1") { // Vertical layout ?>
+if ($layout === "0") { // Vertical layout ?>
 	<div id = "BearsClock-vert">
 		<!-- Timezone Before -->
         <?php
