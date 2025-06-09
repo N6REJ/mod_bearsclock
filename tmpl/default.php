@@ -160,12 +160,13 @@ if ($layout === "0") { // Vertical layout ?>
         }
     }
 
-    // Pad the hours, minutes and seconds with leading zeros, if required
+    // Pad the hours with leading zeros if required, but always pad minutes and seconds
     if (leadingZeros_<?php echo $moduleTitle; ?> === "time" || leadingZeros_<?php echo $moduleTitle; ?> === "both") {
         currentHours_<?php echo $moduleTitle; ?> = (currentHours_<?php echo $moduleTitle; ?> < 10 ? "0" : "") + currentHours_<?php echo $moduleTitle; ?>;
-        currentMinutes_<?php echo $moduleTitle; ?> = (currentMinutes_<?php echo $moduleTitle; ?> < 10 ? "0" : "") + currentMinutes_<?php echo $moduleTitle; ?>;
-        currentSeconds_<?php echo $moduleTitle; ?> = (currentSeconds_<?php echo $moduleTitle; ?> < 10 ? "0" : "") + currentSeconds_<?php echo $moduleTitle; ?>;
     }
+    // Always pad minutes and seconds to two digits
+    currentMinutes_<?php echo $moduleTitle; ?> = (currentMinutes_<?php echo $moduleTitle; ?> < 10 ? "0" : "") + currentMinutes_<?php echo $moduleTitle; ?>;
+    currentSeconds_<?php echo $moduleTitle; ?> = (currentSeconds_<?php echo $moduleTitle; ?> < 10 ? "0" : "") + currentSeconds_<?php echo $moduleTitle; ?>;
 
     // Prepare string versions for display for date
     let monthStr, dateStr;
