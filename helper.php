@@ -13,6 +13,8 @@ declare(strict_types=1);
 
 namespace BearsClock\Module\BearsClock\Site\Helper;
 
+defined('_JEXEC') or die('Direct Access to this location is not allowed.');
+
 use Joomla\Registry\Registry;
 
 final class BearsClockHelper

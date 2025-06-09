@@ -13,6 +13,8 @@
 
 declare(strict_types=1);
 
+defined('_JEXEC') or die('Direct Access to this location is not allowed.');
+
 use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\Uri\Uri;

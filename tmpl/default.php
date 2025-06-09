@@ -13,7 +13,6 @@
  **/
 
 // No direct access
-// (Joomla 5 modules do not require this, but kept for legacy compatibility)
 defined('_JEXEC') or die('Direct Access to this location is not allowed.');
 
 $moduleTitle  = $module->title;
