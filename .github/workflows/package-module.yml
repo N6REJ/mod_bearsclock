@@ -535,7 +535,12 @@ jobs:
           else
             echo "::warning::updates.xml file not found in repository"
           fi
-      
+
+      # Final cleanup of any .bak files
+      - name: Final cleanup of backup files
+        run: |
+          rm -f mod_bearsclock.xml.bak updates.xml.bak CHANGELOG.md.bak || true
+
       # Upload artifact for easy access from GitHub Actions
       - name: Upload to GitHub Artifacts
         if: steps.context.outputs.is_pr_merge == 'true' || steps.context.outputs.is_manual == 'true'
