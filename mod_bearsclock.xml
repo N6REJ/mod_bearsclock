@@ -67,8 +67,8 @@
                     <option value = "format9">Yes. (Wed Jan 16)</option>
                 </field>
                 <field name = "layout" type = "radio" default = "1" label = "MOD_BEARS_CLOCK_LAYOUT_LABEL" description = "MOD_BEARS_CLOCK_LAYOUT_DESC" class="btn-group btn-group-yesno">
-                    <option value = "0">JYES</option>
-                    <option value = "1">JNO</option>
+                    <option value = "1">JYES</option>
+                    <option value = "0">JNO</option>
                 </field>
                 <field name = "daytype" type = "radio" default = "1" label = "MOD_BEARS_CLOCK_DAYTYPE_LABEL" description = "MOD_BEARS_CLOCK_DAYTYPE_DESC" class="btn-group btn-group-yesno">
                     <option value = "1">JYES</option>
@@ -117,4 +117,7 @@
             </fieldset>
         </fields>
     </config>
+    <updateservers>
+        <server type="extension" priority="1" name="Bears Clock Updates">https://raw.githubusercontent.com/N6REJ/mod_bearsclock/main/updates.xml</server>
+    </updateservers>
 </extension>
