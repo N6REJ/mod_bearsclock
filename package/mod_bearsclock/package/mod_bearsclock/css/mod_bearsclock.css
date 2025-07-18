@@ -1,0 +1,28 @@
+/**
+ * @package Bears Clock
+ * @author      N6REJ
+ * @email       troy@hallhome.us
+ * @website     https://www.hallhome.us
+ * @copyright   Copyright (c) 2025 N6REJ
+ * @license     GNU General Public License version 3 or later; see LICENSE
+ * @since       2025.6.8
+ **/
+
+/* Clock */
+#BearsClock-vert{
+	font-size: 1em;
+	}
+#BearsClock-horz{
+	font-size: 1em;
+}
+/* Time */
+.BearsClockTime {
+	text-align: left;
+ }
+/* Date */
+.BearsClockDate {
+	text-align: center;
+ }
+/* Timezone */
+.BearsClockTimezone {	text-align: center;
+ }
