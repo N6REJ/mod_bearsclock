@@ -1,4 +1,4 @@
-name: Package and Release Module
+name: Module Packager
 
 on:
   pull_request:
