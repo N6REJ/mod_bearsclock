@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
     <update>
-        <name>Bears Clock</name>
-        <description>Bears Clock module</description>
+        <name>Bears Bears Clock</name>
+        <description>Bears Clock module by Bear</description>
         <element>mod_bearsclock</element>
         <type>module</type>
-        <version>2025.07.20</version>
+        <version>2025.06.09.3</version>
         <client>site</client>
         <infourl title="GitHub Repository">https://github.com/N6REJ/mod_bearsclock</infourl>
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/N6REJ/mod_bearsclock/releases/download/2025.07.20/mod_bearsclock_2025.07.20.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/N6REJ/mod_bearsclock/releases/download/2025.06.09.3/mod_bearsclock_2025.06.09.3.zip</downloadurl>
         </downloads>
+        <targetplatform name="joomla" version="4.*" />
         <targetplatform name="joomla" version="5.*" />
         <php_minimum>8.1</php_minimum>
     </update>

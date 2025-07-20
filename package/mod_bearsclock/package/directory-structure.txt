@@ -17,10 +17,33 @@ package/mod_bearsclock
 ├── mod_bearsclock.xml
 ├── mod_bearsclock.xml.bak
 ├── package
-│   └── mod_bearsclock
+│   ├── directory-structure.txt
+│   ├── mod_bearsclock
+│   │   ├── CHANGELOG.md
+│   │   ├── CHANGELOG.md.bak
+│   │   ├── License.txt
+│   │   ├── README.md
+│   │   ├── css
+│   │   │   ├── index.html
+│   │   │   └── mod_bearsclock.css
+│   │   ├── favicon.ico
+│   │   ├── helper.php
+│   │   ├── index.html
+│   │   ├── language
+│   │   │   └── en-GB
+│   │   │       ├── mod_bearsclock.ini
+│   │   │       └── mod_bearsclock.sys.ini
+│   │   ├── mod_bearsclock.php
+│   │   ├── mod_bearsclock.xml
+│   │   ├── mod_bearsclock.xml.bak
+│   │   ├── tmpl
+│   │   │   ├── default.php
+│   │   │   └── index.html
+│   │   └── updates.xml
+│   └── mod_bearsclock_2025.07.18.zip
 ├── tmpl
 │   ├── default.php
 │   └── index.html
 └── updates.xml
 
-7 directories, 17 files
+11 directories, 36 files
