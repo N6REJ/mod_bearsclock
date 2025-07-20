@@ -1,0 +1,24 @@
+/home/runner/work/_temp/joomla-build-mod_bearsclock-2025.07.20.1
+├── CHANGELOG.md
+├── License.txt
+├── README.md
+├── css
+│   ├── index.html
+│   └── mod_bearsclock.css
+├── directory-structure.txt
+├── favicon.ico
+├── helper.php
+├── index.html
+├── language
+│   └── en-GB
+│       ├── mod_bearsclock.ini
+│       └── mod_bearsclock.sys.ini
+├── mod_bearsclock.php
+├── mod_bearsclock.xml
+├── mod_bearsclock_2025.07.20.1.zip
+├── tmpl
+│   ├── default.php
+│   └── index.html
+└── updates.xml
+
+5 directories, 17 files
