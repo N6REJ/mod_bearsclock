@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2026.10.16] - 2026-10-16
+## [2026.10.17] - 2026-10-17
 
 ### Added
 
@@ -13,8 +13,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-* Update version to 2025.07.20 [skip ci] ([46e387e](https://github.com/N6REJ/mod_bearsclock/commit/46e387e))
-* Update module-packager.yml ([b26297e](https://github.com/N6REJ/mod_bearsclock/commit/b26297e))
 * Update version to 2025.07.20.1 [skip ci] ([8d07997](https://github.com/N6REJ/mod_bearsclock/commit/8d07997))
 * Update .gitignore ([6c59211](https://github.com/N6REJ/mod_bearsclock/commit/6c59211))
 * Update stats downloads snapshot [skip ci] ([a8c95f0](https://github.com/N6REJ/mod_bearsclock/commit/a8c95f0))
@@ -42,4 +40,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Update stats downloads snapshot [skip ci] ([bfa0369](https://github.com/N6REJ/mod_bearsclock/commit/bfa0369))
 * feat: add Joomla 6 support to update manifest ([01fa783](https://github.com/N6REJ/mod_bearsclock/commit/01fa783))
 * Merge remote-tracking branch 'origin/main' ([33b4a5c](https://github.com/N6REJ/mod_bearsclock/commit/33b4a5c))
+* Update version to 2026.10.16 [skip ci] ([3ee8a75](https://github.com/N6REJ/mod_bearsclock/commit/3ee8a75))
+* Use Joomla Packager with release ZIP checksums ([fba486b](https://github.com/N6REJ/mod_bearsclock/commit/fba486b))
 

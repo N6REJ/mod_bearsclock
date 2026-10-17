@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <updates>
-    <update>
-        <name>Bears Clock</name>
-        <description>Bears Clock module</description>
-        <element>mod_bearsclock</element>
-        <type>module</type>
-        <version>2026.10.16</version>
-        <client>site</client>
-        <infourl title="GitHub Repository">https://github.com/N6REJ/mod_bearsclock</infourl>
-        <downloads>
-<downloadurl type="full" format="zip">https://github.com/N6REJ/mod_bearsclock/releases/download/2026.10.16/mod_bearsclock_2026.10.16.zip</downloadurl>
-        </downloads>
-        <targetplatform name="joomla" version="(5|6).*" />
-        <php_minimum>8.1</php_minimum>
-    </update>
+  <update>
+    <name>Bears Clock</name>
+    <description>Bears Clock module</description>
+    <element>mod_bearsclock</element>
+    <type>module</type>
+    <version>2026.10.17</version>
+    <client>site</client>
+    <infourl title="GitHub Repository">https://github.com/N6REJ/mod_bearsclock</infourl>
+    <downloads>
+      <downloadurl type="full" format="zip">https://github.com/N6REJ/mod_bearsclock/releases/download/2026.10.17/mod_bearsclock_2026.10.17.zip</downloadurl>
+    </downloads>
+    <targetplatform name="joomla" version="(5|6).*" />
+    <php_minimum>8.1</php_minimum>
+    <sha256>7b81afe85696d79aee781181d1b615ea190cbca8e9b47996a591ac4554e1f0c8</sha256>
+  </update>
 </updates>
