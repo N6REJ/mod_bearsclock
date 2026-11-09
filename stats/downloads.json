@@ -3,7 +3,7 @@
   "owner": "N6REJ",
   "repo": "mod_bearsclock",
   "visibility": "public",
-  "generatedAt": "2026-11-08T12:53:48.573Z",
+  "generatedAt": "2026-11-09T15:28:05.502Z",
   "stats": {
     "total": 153,
     "day": 0,
@@ -13,13 +13,13 @@
   "partial": {
     "day": false,
     "week": false,
-    "month": true
+    "month": false
   },
   "snapshots": {
     "windowDays": 180,
-    "count": 30,
+    "count": 31,
     "firstDate": "2026-10-10",
-    "lastDate": "2026-11-08",
+    "lastDate": "2026-11-09",
     "series": {
       "2026-10-10": 86,
       "2026-10-11": 87,
@@ -50,7 +50,8 @@
       "2026-11-05": 153,
       "2026-11-06": 153,
       "2026-11-07": 153,
-      "2026-11-08": 153
+      "2026-11-08": 153,
+      "2026-11-09": 153
     }
   },
   "profile": {
